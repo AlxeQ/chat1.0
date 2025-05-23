@@ -62,13 +62,10 @@ def analyze_interview(transcript, outline):
 访谈记录：
 {transcript}
 
-请生成一个表格，包含以下列：
-- 大纲问题
-- 匹配内容摘要
-- 覆盖情况（充分 / 部分 / 未覆盖）
-- 建议补问
+请生成一个标准 Markdown 表格，包含以下列（列标题请严格按顺序填写）：
+| 大纲问题 | 匹配内容摘要 | 覆盖情况（充分 / 部分 / 未覆盖） | 建议补问 |
 
-请以markdown表格格式返回结果。
+请确保表格以 `|` 和 `---` 格式写成 Markdown 表格格
 """
     return call_deepseek_api(prompt)
 
